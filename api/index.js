@@ -113,9 +113,6 @@ app.post("/logout", authenticateToken, async (req, res) => {
   res.json({ message: "Logged out successfully" });
 });
 
-const server = app.listen(3000, () => {
-  console.log("Server running on http://localhost:3000");
-});
 
-// Экспортируем сервер для тестирования
-module.exports = { app, server };
+
+module.exports = app

@@ -1,6 +1,6 @@
 require("dotenv").config();
 const request = require("supertest");
-const { app, server } = require("./index.js");
+const app = require("./index.js");
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
@@ -15,7 +15,6 @@ describe("Auth API", () => {
 
   afterAll(async () => {
     await prisma.$disconnect();
-    server.close();
   });
 
   test("POST /register - should register a new user", async () => {
