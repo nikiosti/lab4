@@ -1,6 +1,6 @@
 require("dotenv").config();
 const request = require("supertest");
-const { app, server } = require("./app.js");
+const { app, server } = require("./index.js");
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
